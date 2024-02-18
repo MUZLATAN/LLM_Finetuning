@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import re
 import os
-
+# https://github.com/bnsreenu/python_for_microscopists/blob/master/311_fine_tuning_GPT2.ipynb
 def read_txt(file_path):
     with open(file_path, "rb") as file:
         text = file.read()
@@ -77,8 +77,8 @@ def train(train_file_path, model_name,
     trainer.save_model()
 
 
-train_file_path = "./data/shakespeare/input.txt"
-model_name='gpt2-large'
+train_file_path = "./data/Q_and_A_dataset/input.txt"
+model_name='gpt2'
 output_dir = './model/gpt2_finetuing'
 overwrite_output_dir = False
 per_device_train_batch_size=8
